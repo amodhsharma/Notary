@@ -3,3 +3,30 @@ body{   /*can get the below code directly from any site, just search for css gra
 background: -webkit-linear-gradient(to top, #DECBA4, #3E5151);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to top, #DECBA4, #3E5151); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
+.responsive{ /*Applies to html elements with name responsive, mainly the image elements */
+max-width: 75%;
+height: auto;
+}
+
+img{
+    padding: 15 px;
+}
+
+.displayBox{
+    width: 100%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.scroll-box{
+    overflow-y: auto;   
+    /*content will be allowed to overflow vertically, 
+    but a scrollbar will appear automatically if necessary to allow users 
+    to scroll through the overflowed content vertically.*/
+    height:500px;
+    float:left;
+    /*any element with this class will be floated to the left within its containing element*/
+    padding: 1rem;
+    /*root em element*/
+}
