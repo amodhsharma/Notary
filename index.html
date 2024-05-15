@@ -6,7 +6,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!--VVIMP linking od css and js-->
     <link rel="stylesheet" href="style.css">
+    <script src="/SearchString.js"></script>
     
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -16,7 +18,7 @@
         <div class="row">
             <div class="col-md-8">  <!--divides first 8 parts of row into column 1 and remaining 4 in column 4 as ootstrap consists of 12 columns -->
                 <!--Main content area ( book and text )-->
-                <img src="NotoryLogowhiteMed.png" class="img-responsive">
+                <img src="NotoryLogowhiteMed.png" class="responsive">
                 <div class="card mb-4"> <!--mb means margin bottom and assigns it a value of 4-->
                     <h2 class="card-header" id ="fileName">Book Title</h2>
                     <div class="card-body">
@@ -33,9 +35,9 @@
             <div class="col-md-4">
                 <!--content for sidebar-->
                 <!--Search widget-->
-                <div class="class my-4"> <!--Start a new dev-->
+                <div class="card my-4"> <!--Start a new dev-->
                   <h5 class="card-header">Search</h5> <!--make a header-->
-                  <div class="class-body">  <!--making a body for the card-->
+                  <div class="card-body">  <!--making a body for the card-->
                     <div class="input-group"> <!--making a group of all inputs so that we can style them together using css-->
                       <input type="text"  class="form-control"  id="keywords" placeholder="Search for...">
                       <span class= input-group-btn>
@@ -48,13 +50,13 @@
                   </div>
                 </div>
                 <!--Select a book widget-->
-                <div class="class my-4">
+                <div class="card my-4">
                   <h5 class="card-header">Select a book</h5>
-                  <div class="class-body">
+                  <div class="card-body">
                     <!--we have a list of books so we wanna add more rows to select from-->
                     <div class ="row">  <!--Can name anything, naming row for convinience-->
                       <div class="col-md-12"> <!--A row with 12 columns created-->
-                        <ul class="list-unstyled mb-0"> 
+                        <ul class="list-unstyled mb-0" id="mostUsed"> 
                           <!--creating 3 li, one for each book-->
                           <li><a href="#">Harry Potter</a></li>
                           <li><a href="#">Alice in Wonderland</a></li>
@@ -65,18 +67,43 @@
                   </div>
                 </div>
                 <!--!Most used words-->
-                <div class="card mt-4">
+                <div class="card my-4">
                   <h5 class="card-header">Most used words</h5>
                   <div class="card-body">
                     <!--will make another list here, but the difference is that it will be dynamic-->
                     <div class="row">
                       <div class="col-md-12">
-                        <ul class="list-unstyled mb=0">
+                        <ul class="list-unstyled mb=0" id="mostUsed"> <!--margin bottom = 0-->
                           
                         </ul>
                       </div>
                     </div>
                   </div>
+                </div>
+                <!--Least used words-->
+                <div class="card my-4">
+                  <h5 class="card-header">Least used words</h5>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-lg-12"><!--large screen thing ( refer handwritten notes)-->
+                        <ul class="list-unstyled mb-0" id="leastUsed">
+                          
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--Document Stats-->
+                <div class="card my-4">
+                  <h5 class="card-header">Document Stats</h5>
+                  <div class="card-body">
+                    <ul class="list-unstyled mb-0">
+                      <li id="docLength"></li>
+                      <li id="wordCount"></li>
+                      <li id="charCount"></li>
+                    </ul>
+                  </div>
+
                 </div>
             </div>
           </div>
