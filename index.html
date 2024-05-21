@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Notary - Learn more aboout your books</title>
+    <title>Notary - Learn more about your books</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,7 +11,8 @@
     <script src="/SearchString.js"></script>
     
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
       <div class= "container">
@@ -26,8 +27,10 @@
                             Select a book on the right
                         </div>
                     </div>
-                    <div class ="class-footer text-muted"><!--muted here gives it a grey color-->
-
+                    <div class ="card-footer text-muted d-flex justify-content-center"><!--muted here gives it a grey color-->
+                      <a href="https://www.youtube.com/watch?v=KEvLAe_2jXo&list=PLNPsnMKCW_FQqnhbnV8G1ACcXQtpKxXpK&index=2" style="margin-right: 50px;">Watch this youtube video!</a>
+                      <!--this style="margin-right: 50px;" allows us to add padding between the 2 hyperlinks -->
+                      <a href="https://github.com/CoderFoundry/Notary">Refer to its Github file!</a>
                     </div>
                 </div>
             </div>
@@ -39,9 +42,9 @@
                   <h5 class="card-header">Search</h5> <!--make a header-->
                   <div class="card-body">  <!--making a body for the card-->
                     <div class="input-group"> <!--making a group of all inputs so that we can style them together using css-->
-                      <input type="text"  class="form-control"  id="keywords" placeholder="Search for...">
-                      <span class= input-group-btn>
-                        <button class="btn btn-secondary" type="button">Search</button>
+                      <input type="text"  class="form-control"  id="keyword" placeholder="Search for...">
+                      <span class="input-group-btn">
+                        <button class="btn btn-secondary" type="button" onclick="performMark()" >Search</button>
                       </span>
                     </div>
                   </div>
@@ -51,7 +54,7 @@
                 </div>
                 <!--Select a book widget-->
                 <div class="card my-4">
-                  <h5 class="card-header">Select a book</h5>
+                  <h5 class="card-header">Select a Book</h5>
                   <div class="card-body">
                     <!--we have a list of books so we wanna add more rows to select from-->
                     <div class ="row">  <!--Can name anything, naming row for convinience-->
@@ -73,7 +76,7 @@
                     <!--will make another list here, but the difference is that it will be dynamic-->
                     <div class="row">
                       <div class="col-md-12">
-                        <ul class="list-unstyled mb=0" id="mostUsed"> <!--margin bottom = 0-->
+                        <ul class="list-unstyled mb-0" id="mostUsed"> <!--margin bottom = 0-->
                           
                         </ul>
                       </div>
@@ -107,9 +110,26 @@
                 </div>
             </div>
           </div>
+
+          <script id="template-ul-items" type="text/template">
+            <li>
+               {{val}}
+            </li>    
+        </script>
+        <!--why type="text/template-->
+        <!--it is a non-JavaScript MIME type-->
+        <!--it tells the browser how to handle the script content-->
+        <!--The default MIME type for <script> tags is text/javascript, which means the content will be treated and executed as JavaScript.-->
+        <!--When you use a non-JavaScript MIME type, such as type="text/template", you are indicating to the browser that the content within the <script> tag should not be executed as JavaScript. -->
+        <!-- Instead, it should be treated as plain text or any other specified format. This allows you to store template code, data, or other non-executable content inside a <script> element without it being run by the browser.-->
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"> </script>
+
+  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
